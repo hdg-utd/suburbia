@@ -10,8 +10,11 @@ class CitySelection extends Component {
         const { cities } = this.props
         return (
             <div className="city-selection">
-                {
-                    cities.map((city, index) => <button>{city}</button>)
+                <h2>Equivalent Suburb In </h2>
+                { 
+                    Object.keys(cities).map(city => {
+                        return(<h3>{city}: {city[cities]}</h3>)
+                    }) 
                 }
             </div>
         )
